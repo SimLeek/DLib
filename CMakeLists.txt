@@ -73,12 +73,8 @@ endif(BUILD_DVision)
 
 if(BUILD_DUtilsCV OR BUILD_DVision)
   # OpenCV
-  if($ENV{USE_Dunstable})
-    find_package(OpenCV REQUIRED)
-  else()
-    set(OpenCV_DIR "/usr/local/opencv/opencv-3.4.1")
-    find_package(OpenCV REQUIRED PATHS ${OpenCV_DIR} NO_DEFAULT_PATH)
-  endif()
+  set(OpenCV_DIR "/usr/local/opencv/opencv-3.4.1")
+  find_package(OpenCV REQUIRED PATHS ${OpenCV_DIR} NO_DEFAULT_PATH)
 
   if(NOT OpenCV_FOUND)
      message(FATAL_ERROR "OpenCV > 3.x not found.")
