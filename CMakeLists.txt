@@ -70,7 +70,6 @@ endif(BUILD_DVision)
 
 if(BUILD_DUtilsCV OR BUILD_DVision)
   # OpenCV
-  set(OpenCV_DIR "/usr/local/opencv/opencv-3.4.1")
   find_package(OpenCV REQUIRED PATHS ${OpenCV_DIR} NO_DEFAULT_PATH)
 
   if(NOT OpenCV_FOUND)
