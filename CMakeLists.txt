@@ -70,7 +70,7 @@ endif(BUILD_DVision)
 
 if(BUILD_DUtilsCV OR BUILD_DVision)
   # OpenCV
-  find_package(OpenCV REQUIRED PATHS ${OpenCV_DIR} NO_DEFAULT_PATH)
+  find_package(OpenCV REQUIRED PATHS)
 
   if(NOT OpenCV_FOUND)
      message(FATAL_ERROR "OpenCV > 3.x not found.")
